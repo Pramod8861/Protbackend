@@ -15,4 +15,7 @@
     "cors": "^2.8.5",
     "day-9-portfolio-website-interactive-main": "file:",
     "express": "^4.21.2",
-   
+    "live-server": "^1.2.2",
+    "mongoose": "^8.9.4"
+  }
+}
