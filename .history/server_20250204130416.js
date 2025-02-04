@@ -7,7 +7,7 @@ const app = express();
 
 // Connect to MongoDB
 mongoose
-  .connect('mongodb+srv://pramod18:pramod18@cluster0.cny7fgt.mongodb.net/contactForm', {
+  .connect('mongodb+srv://pramod18:<pramod18>@cluster0.cny7fgt.mongodb.net/contactForm', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
