@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'contact.html'));
   });
   
-  app.post('/check', async (req, res) => {
+  app.get('/check', async (req, res) => {
     return res.status(200).json({ error: 'server is running' });
   });
 
