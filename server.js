@@ -32,6 +32,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'contact.html'));
   });
   
+  app.post('/check', async (req, res) => {
+    return res.status(200).json({ error: 'server is running' });
+  });
+
+
 // API Route to handle contact form submissions
 app.post('/api/contact', async (req, res) => {
     console.log('Received request:', req.body); // Log the request body to check
