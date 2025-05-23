@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
   });
   
   app.get('/check', async (req, res) => {
-    return res.status(200).json({ error: 'server is running' });
+    return res.status(201).json({ error: 'server is running' });
   });
 
 
