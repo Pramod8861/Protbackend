@@ -2,8 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const path = require('path'); // Import path module
+//const path = require('path'); // Import path module
 const app = express();
+
+app.use(cors({
+  origin: 'https://contact-form09.netlify.app',
+  
+}));
+
 
 // Connect to MongoDB
 mongoose
@@ -25,12 +31,8 @@ const contactSchema = new mongoose.Schema({
 
 const Contact = mongoose.model('Contact', contactSchema);
 
-// Middleware
-app.use(cors()); // Enable CORS for frontend requests
 app.use(bodyParser.json()); // Parse JSON bodies
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'contact.html'));
-  });
+
   
   app.get('/check', async (req, res) => {
     return res.status(201).json({ error: 'server is running' });
