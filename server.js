@@ -13,7 +13,7 @@ app.use(cors({
 
 // Connect to MongoDB
 mongoose
-  .connect('mongodb+srv://pramod18:pramod18@cluster0.cny7fgt.mongodb.net/contactForm', {
+  .connect('mongodb+srv://pramod18:pramod8658@cluster0.cny7fgt.mongodb.net/Contact', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -30,8 +30,6 @@ const contactSchema = new mongoose.Schema({
 });
 
 const Contact = mongoose.model('Contact', contactSchema);
-
-app.use(bodyParser.json()); // Parse JSON bodies
 
   
   app.get('/check', async (req, res) => {
